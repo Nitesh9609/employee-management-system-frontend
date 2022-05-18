@@ -1,0 +1,23 @@
+    .employeeDetail{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    table {
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+    }
+    
+    /* tr {
+    border: 100px solid black;
+    } */
+    
+    td {
+    text-align: center;
+    border: 1px solid;
+    }
+

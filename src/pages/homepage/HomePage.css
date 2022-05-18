@@ -1,0 +1,7 @@
+.home{
+    display: grid;
+    grid-template-columns: 500px 500px ;
+    text-align: left;
+    margin-top: 45vh;
+    margin-left: 35vw;
+}

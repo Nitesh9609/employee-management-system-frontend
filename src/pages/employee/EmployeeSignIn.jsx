@@ -22,10 +22,20 @@ const handleOnChange = (event) =>{
 
 const handleOnClick = (()=>{
   axios.post('https://employee-management-system-backend-rust.vercel.app/app/user/employeeSignIn',input)
-  .then(res => sendEmployee(res.data))
-  .catch(err => console.log(err))
+  .then(res => {sendEmployee(res.data)
+  if(res.data){
+    alert("LogIn Successfully")
+    navigate('/empDetail')
+  }
+  })
+  .catch(err => {console.log(err)
+    if(err){
+      alert("Something Went Wrong Please Check Your Email and Password")
+      navigate('/employee')
+    }
+  })
 
-  navigate('/empDetail')
+  
 })
 
 

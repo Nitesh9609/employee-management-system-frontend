@@ -22,12 +22,18 @@ const handleOnChange = (event) =>{
 
 const handleOnClick = ( async ()=>{
  await axios.post("https://employee-management-system-backend-rust.vercel.app/app/user/adminSignIn",input)
-  .then(res => sendToken(res.data))
-  .catch(err => console.log(err))
-  navigate('/displayEmployee')
-
-
-  
+  .then(res => {sendToken(res.data);
+  if(res.data){
+    alert("LogIn Successfully")
+    navigate('/displayEmployee')
+  }
+  })
+  .catch(error => {console.log(error)
+  if(error){
+    alert('Something Went Wrong');
+    navigate('/admin')
+  }
+  })
 })
 
 

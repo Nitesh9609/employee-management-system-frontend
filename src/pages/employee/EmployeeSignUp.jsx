@@ -56,7 +56,7 @@ const handleOnClick = (async() =>{
                             required
                             name="password" 
                             type="password"
-                            label="Password" 
+                            label="Password(min 8 character)" 
                             variant="outlined" 
                             onChange={handleOnChange} 
                             />

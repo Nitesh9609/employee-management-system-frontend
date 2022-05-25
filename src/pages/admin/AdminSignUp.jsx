@@ -17,10 +17,15 @@ const handleOnChange = (event) =>{
 
 const handleOnClick = (async () =>{
     await axios.post('https://employee-management-system-backend-rust.vercel.app/app/user/adminSignUp',input)
-    .then(res => alert(res.data))
+    // await axios.post('http://localhost:8080/app/user/adminSignUp',input)
+    .then(res => {alert(res.data)
+    if(res.data === 'Admin created Successfully'){
+      navigate('/admin')
+    }
+    })
     .catch(err => console.log(err))
 
-    navigate("/admin")
+    
 })
 
   return (
@@ -45,6 +50,17 @@ const handleOnClick = (async () =>{
                         name="email"
                         type="email" 
                         label="Email" 
+                        variant="outlined" 
+                        onChange={handleOnChange} 
+                        />
+            </div>
+
+            <div className='signup'>
+            <TextField 
+                        required
+                        name="adminAuthentication"
+                        type="password" 
+                        label="Admin Authentication Password" 
                         variant="outlined" 
                         onChange={handleOnChange} 
                         />

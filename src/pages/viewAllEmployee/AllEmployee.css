@@ -1,15 +1,16 @@
-    .App {
+    .empTable {
     width: 100%;
     /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
     }
     
     table {
     border: 2px solid forestgreen;
     width: 800px;
-    height: 200px;
+    height: 100%;
     }
     
     th {

@@ -22,6 +22,7 @@ const handleOnChange = (event) =>{
 
 const handleOnClick = ( async ()=>{
  await axios.post("https://employee-management-system-backend-rust.vercel.app/app/user/adminSignIn",input)
+//  await axios.post("http://localhost:8080/app/user/adminSignIn",input)
   .then(res => {sendToken(res.data);
   if(res.data){
     alert("LogIn Successfully")
@@ -42,12 +43,14 @@ const handleOnClick = ( async ()=>{
         <div>
           <div className='signUp'>
             <Button onClick={() => navigate('/adminSignUp')} variant="contained">SIGN UP</Button>
+          </div><br/>
+          
+          <div>
+            <h1>Admin Login Form</h1>
           </div>
           
-          
-          <div className="button"></div>
         <div className="form">
-          <h1>Admin Login Form</h1>
+          
           <div className="login">
             <TextField
               required

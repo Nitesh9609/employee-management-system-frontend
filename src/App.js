@@ -26,7 +26,7 @@ function App() {
           <Route path='/employeeSignUp' element={<EmployeeSignUp/>}/>
           <Route path='/admin' element={<AdminSignIn/>}/>
           <Route path='/adminSignUp' element={<AdminSignUp/>}/>
-          <Route path='/empDetail' element={<EmpDetail/>}/>
+          <Route path='/empDetail/:id' element={<EmpDetail/>}/>
           <Route path='/allEmployee' element={<AllEmployee/>}/>
           <Route path='/updateEmployee/:id' element={<EditEmployee/>}/>
           <Route path='/displayEmployee' element={<DisplayEmployee/>}/>

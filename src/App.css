@@ -9,6 +9,8 @@
 
 .header{
   text-align: left;
+  position: absolute;
+  width: 10%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

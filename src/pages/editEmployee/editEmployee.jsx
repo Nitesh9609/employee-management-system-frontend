@@ -20,7 +20,7 @@ const EditEmployee = ({getToken}) => {
     
     useEffect(()=>{
         axios
-      .get(`http://localhost:8080/app/user/viewEmployee/${id}`)
+      .get(`https://employee-management-system-backend-rust.vercel.app/app/user/viewEmployee/${id}`)
       .then((res) => setEmp(res.data));
     })
 
